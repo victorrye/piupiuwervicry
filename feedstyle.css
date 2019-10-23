@@ -1,0 +1,194 @@
+.wrapper{
+    overflow: auto;
+    background-color: #E9EBEE;
+}
+
+.feed{
+    width: 80%;
+    margin: 15px auto 15px auto;
+}
+
+.feedprincipal{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 50%;
+    height: auto;
+    background-color: #FFF;
+    word-wrap: break-word;
+    padding-bottom: 30px;
+}
+
+.feedsecundario1{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 23%;
+    height: auto;
+    margin: 0 2% 0 0;
+    background-color: #FFF;
+    word-wrap: break-word;
+}
+
+.feedsecundario2{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 23%;
+    height: auto;
+    background-color: #FFF;
+    word-wrap: break-word;
+}
+
+.piupost{
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 10px 0 10px 0;
+    border-bottom: 30px solid #E9EBEE;
+}
+
+#piuform{
+    width: 68%;
+    font-family: "Helvetica", "Arial", sans-serif;
+    resize: none;
+    margin: 0 10px 0 10px;
+    border: none transparent;
+    outline: none;
+    font-size: 1.2em;
+    word-wrap: break-word;
+    max-height: 2000px;
+}
+
+#postbutton{
+    color: #FFF;
+    border: 0px;
+    font-family: "Arial Rounded MT Bold", "Helvetica";
+    height: 40px;
+    border-radius: 50px;
+    padding: 0 15px;
+    margin-top: 15px;
+    background-color: #FF6464;
+}
+
+.title{
+    text-align: center;
+    font-size: 1.7em;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: lighter;
+    margin: 15px
+}
+
+.linhahorizontal1{
+    border-bottom: 3px solid #D4D4D4;
+    margin: 0 10px 15px;
+}
+
+.profilebox{
+    display: flex;
+    align-items: center;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+}
+
+.name{
+    font-family: "Arial", sans-serif;
+    margin-bottom: 5px;
+}
+
+#name2{
+    margin: 0;
+}
+
+.handle{
+    font-family: "Arial", sans-serif;
+    font-size: 0.8em;
+    color: #606060;
+}
+
+#handle2{
+    margin-left: 10px;
+}
+
+#followbutton{
+    margin: 0 4% 0 auto;
+    color: #FF6464;
+    border: solid #FF6464;
+    font-family: "Arial Rounded MT Bold", "Helvetica";
+    font-weight: bold;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #FFF;
+}
+
+.trendingpiu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    
+}
+
+.trendname{
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    word-break: break-word;
+    margin: 0 15px;
+}
+
+.trendnumber{
+    font-family: "Arial", sans-serif;
+    font-size: 0.8em;
+    color: #606060;
+    margin-left: 15px;
+}
+
+.linhahorizontal2{
+    border-bottom: 2px solid #D4D4D4;
+    margin: 0 0 15px;
+}
+
+#linhavermelha{
+    border-bottom-color: #FF6464;
+    margin: 15px 50px;
+}
+
+.post{
+    display: flex;
+}
+
+.identifier{
+    width: 100%;
+    margin: 15px 0 6px 0;
+    display: flex;
+    align-items: center;
+}
+
+#timedot{
+    margin: 0 10px;
+}
+
+.piu{
+    width: 100%;
+    word-wrap: break-word;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+#size{
+    width: 80%;
+}
+
+.piuimage{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.footersec{
+    background-color: #E9EBEE;
+    font-family: "Helvetica", "Arial";
+    font-size: 0.7em;
+    padding: 2px 15px;
+    color: #888888;
+}

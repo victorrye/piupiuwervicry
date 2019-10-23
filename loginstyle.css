@@ -1,0 +1,50 @@
+main{
+    margin-top: 8%;
+    margin-left: 15%;
+    margin-right: 15%;
+    
+}
+h1 {
+    background-color: #FF6464;
+    padding: 1%;
+    width: 100%;
+    padding-left: 10%;
+    box-sizing: border-box
+}
+.rodape {
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    background-color: #c4c4c4;
+    color: #FFF;
+    width: 100%;
+    padding: 1%;
+    font-size: 80%
+}
+.acao {
+    font-family: "Arial Rounded MT Bold","Helvetica", sans-serif;
+    font-weight: bold;
+    font-size: 200%;
+}
+.informacoes{
+    display: flex;
+    flex-direction: column
+}
+h3 {
+    float: right;
+    border-left: 1px solid #000;
+    padding-left: 10%;
+}
+h2 {
+    float: left;
+}
+.vertical { 
+    border-left: 1px solid black; 
+    height: 50%; 
+    float: center;
+    left: 50%; 
+        } 
+input[type=submit] {
+    padding: 5px 10px;
+    border: 2px solid #FF6464
+}

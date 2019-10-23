@@ -1,0 +1,68 @@
+.barranav{
+    width: 100%;
+    height: 45px;
+    background-color: #FF6464;
+}
+
+.barranavinterface{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    height: 45px;
+    margin: 0 10% 0 10%;
+}
+
+.barranavicone{
+    width: 45px;
+    height: 45px;
+    background: url(icons/piupiuwericone.png);
+}
+
+.barranavsearch{
+    width: 300px;
+    height: 45px;
+    margin: 0 0 0 0;
+}
+
+#search{
+    width: 100%;
+    height: 80%;
+    margin: 4.5px 0 0 0;
+    border: 0px;
+    padding: 12px 12px;
+    border-radius: 40px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+.barranavperfil{
+    width: 45px;
+    height: 45px;
+    background-color: #FF6464;
+    margin-left: 10px;
+}
+
+#imagemperfil1{
+    margin: 10%;
+    border-radius: 100%;
+}
+
+#imagemperfil2{
+    margin: 0.6em;
+    border-radius: 100%;
+}
+
+.barranavsep{
+    display: flex;
+    justify-content: flex-end;
+    width: 25%;
+    height: 100%;
+    margin-right: 0;
+}
+
+.barranavbotao{
+    margin: auto 0 auto 0;
+    height: 80%;
+    border-right: 1px solid #D4D4D4;
+    padding: 0 4px 0 4px;
+}
