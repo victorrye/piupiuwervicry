@@ -174,17 +174,21 @@
 
 .post{
     display: flex;
+    margin: 2%;
 }
 
 .identifier{
     width: 100%;
-    margin: 15px 0 6px 0;
+    margin: 15px 0 10px 0;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
 #timedot{
     margin: 0 10px;
+    font-size: 1.2rem;
+    color: #606060;
 }
 
 .piu{
@@ -193,7 +197,7 @@
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
-#size{
+.size{
     width: 80%;
 }
 
@@ -243,4 +247,79 @@
 
 .aviso:empty{
     display: none;
+}
+
+.likesbarra{
+    display: flex;
+    margin: 5px 0 0 0;
+    height: 18px;
+    align-items: center;
+}
+
+.likebuttondefault{
+    background: url(../icons/likedefault.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 25px;
+    height: 25px;
+    margin: 0 15px 0 0;
+    border: none;
+}
+
+.likebuttonactive{
+    background: url(../icons/likeactive.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 25px;
+    height: 25px;
+    margin: 0 15px 0 0;
+    border: none;
+}
+
+.likes{
+    font-family: "Helvetica", "Arial";
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #606060;
+    margin: 0 0 0 -3px;
+}
+
+.closebutton{
+    margin: 0 0 0 auto;
+    background: url(../icons/delete.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.editbutton{
+    margin: 0 -2% 0 auto;
+    background: url(../icons/edit.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.buttons{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    margin: 0 0 0 auto;
+}
+
+.editbox{
+    width: 95%;
+    height: auto;
+    font-family: "Helvetica", "Arial", sans-serif;
+    resize: none;
+    word-wrap: break-word;
+    min-height: 100px;
 }
