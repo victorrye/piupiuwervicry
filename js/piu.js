@@ -1,9 +1,9 @@
     var campo = $("#piuform");
     var texto = campo.val();
     var qtdChar = texto.length;
-    $("#contador-char").text(qtdChar);
     var lks = 0;
-    var i = 0;
+    $("#contador-char").text(qtdChar);
+    $(".likebutton").click(likePiu);
 
 $(document).ready(function() {
     disableInicial();
@@ -11,10 +11,17 @@ $(document).ready(function() {
     $("#postbutton").click(postarPiu);
     $("#postbutton").click(resetPiu);
     $("#postbutton").click(clickColor);
-    $(".likebutton").click(likePiu);
     $(".closebutton").click(closePiu);
     $(".editbutton").click(editPiu);
+    $(".expandbutton").click(expandPiu);
 });
+
+function resetLike(){
+    $(".likebutton").off("click", likePiu);
+    $(".likebutton").on("click", likePiu);
+}
+
+resetLike();
 
 function disableInicial(){
     if (qtdChar == 0) {
@@ -67,7 +74,7 @@ function resetPiu() {
     $(qtdChar).val(0)
     $("#contador-char").text(qtdChar);
     $(".contador").removeClass("acimade140");
-    $(".contador").addClass(".abaixode140");
+    $(".contador").addClass("abaixode140");
     disableInicial();
 }
 
@@ -85,48 +92,76 @@ function erro(erromsg){
 function postarPiu(){
     var campo = $("#piuform");
     var texto = campo.val();
-    var piutemp = '<div class="post"> \
-                    <img src="images/homem.png" height = 50px ID="imagemperfil2"> \
-                    <div ID="size"> \
-                        <div class="identifier"> \
-                            <div class="name" ID="name2">John Smith</div> \
-                            <div class="handle" ID="handle2">@TheGenericMan</div> \
-                            <div class="handle" ID="timedot" >·</div> \
-                            <div class="handle">just now</div> \
-                        </div>  \
-                        <div class="piu">texto</div> \
-                    </div> \
-                </div> \
-                <div class="linhahorizontal2" ID="linhavermelha"></div> ';
+    var piutemp = '<div class="postao">\
+                    <div class="post">\
+                        <img src="images/homem.png" height = 50px ID="imagemperfil2">\
+                        <div class="size">\
+                            <div class="identifier">\
+                                <div class="name" ID="name2">John Smith</div>\
+                                <div class="handle" ID="handle2">@TheGenericMan</div>\
+                                <div class="handle" ID="timedot" >·</div>\
+                                <div class="handle">just now</div>\
+                                <div class="buttons">\
+                                    <button class="editbutton"></button>\
+                                    <button class="closebutton"></button>\
+                                </div>\
+                            </div>\
+                            <div class="piu">texto\
+                            </div>\
+                            <div class="likesbarra">\
+                                <button class="likebuttondefault likebutton"></button>\
+                                <span class="likes">0</span>\
+                                <button class="expandbutton"></button>\
+                            </div>\
+                        </div>\
+                    </div>\
+                    <div class="linhahorizontal2" ID="linhavermelha"></div>\
+                </div>';
+                
     var piu = $(piutemp.replace("texto", texto));
     $(".piusgerais").prepend(piu);
-    console.log(texto);
+    $(".likebutton").click(likePiu);
+    $(".closebutton").click(closePiu);
+    $(".editbutton").click(editPiu);
+    $(".likebutton").click(likePiu);
+    $(".expandbutton").click(expandPiu);
+    resetLike();
 }
 
 function likePiu(){
-    if(i % 2 == 0){
+    if($(this).hasClass("likebuttondefault")){
         lks = 1;
     }
-    if(i % 2 != 0){
+    if($(this).hasClass("likebuttonactive")){
         lks = -1;
     }
     $(this).toggleClass("likebuttonactive");
-    var qtdlikes = $(this).closest(".likesbarra").children(".likes");
+    var qtdlikes = $(this).closest(".likesbarra").find(".likes");
     $(qtdlikes).text(parseInt($(qtdlikes).text()) + lks);
     console.log(lks);
-    console.log(i);
-    i += 1;
 }
 
 function closePiu(){
     $(this).closest(".postao").remove(".postao");
 }
-3
+
 function editPiu(){
     var oldtext = $(this).closest(".size").find(".piu").text();
     var piu = $(this).closest(".size").find(".piu");
     var editabletext = $('<textarea/>').prop({class: "editbox"})
-    $(piu).replaceWith(editabletext);
     editabletext.val(oldtext);
+    $(piu).replaceWith(editabletext);
+    editabletext.focus();
+    $(editabletext).blur(function(){
+        console.log("aaaaa");
+        var newtext = $(this).val();
+        var novopiu = $("<div>").prop({class: "piu"});
+        novopiu.text(newtext);
+        $(this).replaceWith(novopiu);
+    })
+}
 
+function expandPiu(){
+    var post = $(this).closest(".postao").find(".post");
+    $(post).toggleClass("expand");
 }

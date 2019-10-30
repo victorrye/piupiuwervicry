@@ -169,17 +169,18 @@
 
 #linhavermelha{
     border-bottom-color: #FF6464;
-    margin: 15px 50px;
+    margin: -5px 50px 15px 50px;
 }
 
 .post{
     display: flex;
     margin: 2%;
+    padding-bottom: 15px;
 }
 
 .identifier{
     width: 100%;
-    margin: 15px 0 10px 0;
+    margin: 15px 0 5px 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -195,6 +196,7 @@
     width: 100%;
     word-wrap: break-word;
     font-family: "Helvetica", "Arial", sans-serif;
+    margin: 0 0 15px 0;
 }
 
 .size{
@@ -322,4 +324,23 @@
     resize: none;
     word-wrap: break-word;
     min-height: 100px;
+}
+
+.expand{
+    background-color: #FFFFFF;
+    position: fixed;
+    left: 50vw;
+    overflow: hidden;
+    border: 2px solid #FF6464;
+}
+
+.expandbutton{
+    background: url(../icons/delete.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 0 0 auto;
+    width: 20px;
+    height: 20px;
+    border: none;
 }
