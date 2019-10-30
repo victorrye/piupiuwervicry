@@ -42,10 +42,16 @@
 
 .piupost{
     display: flex;
+    flex-direction: column;
     width: auto;
     height: auto;
-    padding: 10px 0 10px 0;
+    padding: 20px 10px 20px 10px;
     border-bottom: 30px solid #E9EBEE;
+}
+
+.postar{
+    display: flex;
+    flex-direction: row;
 }
 
 #piuform{
@@ -66,9 +72,20 @@
     font-family: "Arial Rounded MT Bold", "Helvetica";
     height: 40px;
     border-radius: 50px;
-    padding: 0 15px;
-    margin-top: 15px;
+    padding: 0 17px;
+    margin: auto;
+}
+
+.postbuttondefault{
     background-color: #FF6464;
+}
+
+.postbuttoninvalid{
+    background-color: #ffcccc;
+}
+
+.postbuttonclicked{
+    background-color: #ff3333;
 }
 
 .title{
@@ -191,4 +208,39 @@
     font-size: 0.7em;
     padding: 2px 15px;
     color: #888888;
+}
+
+.contador{
+    margin: auto;
+    font-family: "Helvetica", "Arial";
+    font-size: 0.8em;
+}
+
+.acimade140cont{
+    color: #ff0000;
+}
+
+.abaixode140cont{
+    color: #000000;
+}
+
+.acimade140texto{
+    color: #D3D3D3;
+}
+
+.abaixode140texto{
+    color: #000000;
+}
+
+.aviso{
+    font-family: "helvetica", "arial", sans-serif;
+    font-size: 0.8em;
+    margin: 20px 10px 0 80px;
+    color: #ff0000;
+    align-self: flex-end;
+    height: auto;
+}
+
+.aviso:empty{
+    display: none;
 }
