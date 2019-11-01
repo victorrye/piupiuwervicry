@@ -136,7 +136,7 @@
 
 .post{
     display: flex;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .identifier{
@@ -176,6 +176,7 @@
 .piu{
     width: 100%;
     word-wrap: break-word;
+    margin: 0 0 11px 0;
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
@@ -192,4 +193,100 @@
 .linhahorizontal2{
     border-bottom: 2px solid #D4D4D4;
     margin: 0 0 15px;
+}
+
+.likesbarra{
+    display: flex;
+    margin: 5px 0 0 0;
+    height: 18px;
+    align-items: center;
+}
+
+.likebuttondefault{
+    background: url(../icons/likedefault.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 25px;
+    height: 25px;
+    margin: 0 15px 0 0;
+    border: none;
+}
+
+.likebuttonactive{
+    background: url(../icons/likeactive.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 25px;
+    height: 25px;
+    margin: 0 15px 0 0;
+    border: none;
+}
+
+.likes{
+    font-family: "Helvetica", "Arial";
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #606060;
+    margin: 0 0 0 -3px;
+}
+
+.closebutton{
+    margin: 0 0 0 auto;
+    background: url(../icons/delete.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.editbutton{
+    margin: 0 -2% 0 auto;
+    background: url(../icons/edit.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.buttons{
+    display: flex;
+    width: 15%;
+    justify-content: space-between;
+    margin: 0 0 0 auto;
+}
+
+.editbox{
+    width: 95%;
+    height: auto;
+    font-family: "Helvetica", "Arial", sans-serif;
+    resize: none;
+    word-wrap: break-word;
+    min-height: 100px;
+}
+
+.expand{
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #FF6464;
+    justify-content: center;
+}
+
+.expandbutton{
+    background: url(../icons/expand.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0 0 0 auto;
+    width: 20px;
+    height: 20px;
+    border: none;
 }

@@ -174,8 +174,9 @@
 
 .post{
     display: flex;
-    margin: 2%;
-    padding-bottom: 15px;
+    margin: 2% 0 0 1%;
+    padding-bottom: 15px ;
+    box-sizing: border-box;
 }
 
 .identifier{
@@ -329,13 +330,15 @@
 .expand{
     background-color: #FFFFFF;
     position: fixed;
-    left: 50vw;
-    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 2px solid #FF6464;
+    justify-content: center;
 }
 
 .expandbutton{
-    background: url(../icons/delete.png);
+    background: url(../icons/expand.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

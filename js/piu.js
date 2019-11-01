@@ -138,11 +138,10 @@ function likePiu(){
     $(this).toggleClass("likebuttonactive");
     var qtdlikes = $(this).closest(".likesbarra").find(".likes");
     $(qtdlikes).text(parseInt($(qtdlikes).text()) + lks);
-    console.log(lks);
 }
 
 function closePiu(){
-    $(this).closest(".postao").remove(".postao");
+    $(this).closest(".postao").fadeOut(".postao");
 }
 
 function editPiu(){
